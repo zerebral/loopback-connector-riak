@@ -4,13 +4,13 @@ var assert       = require('assert');
 
 describe("api/exists", function(){
   var existsStub, errorSpy, existsSpy;
-  var datasource = { settings: {} };
+  var datasource = { settings: {"node_list" : "192.168.0.101,192.168.0.15,localhost,192.168.0.111"} };
   var modelName = 'TestModel';
 
   beforeEach(function(){
     loopbackRiak.initialize(datasource);
 
-    existsStub = sinon.stub(datasource.connector.db, "exists");
+    existsStub = sinon.stub(datasource.connector, "exists");
 
     errorSpy = sinon.spy();
     existsSpy = sinon.spy();

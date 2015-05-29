@@ -14,10 +14,10 @@
     "test": "mocha --timeout 60000"
   },
   "dependencies": {
+    "basho-riak-client": "^1.2.2",
     "bluebird": "~2.9.10",
-    "loopback-connector": "1.x",
-    "riak-js": "https://github.com/dittach/riak-js/tarball/yokozuna_support",
     "deep-extend": "~0.3.2",
+    "loopback-connector": "1.x",
     "node-uuid": "~1.4.2"
   },
   "devDependencies": {
